@@ -1,0 +1,309 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	color: #181818;
+}
+/*fonts*/
+@font-face {
+	font-family: pantonbold;
+	src: url(../fonts/pantonmtav3-bold.ttf);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: pantonbold;
+}
+p {
+	font-size: 14px;
+}
+header, ul {
+	display: flex;
+}
+header {
+	justify-content: space-between;
+	height: 60px; 
+	align-items: center;
+}
+
+header, .CarList {
+	width: 90%;
+}
+
+.header-navigation {
+	width: 400px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+a{
+	color: #181818;
+	font-size: 14px;
+	transition: 300ms color ease;
+}
+a:hover{
+	color: #6AB04C;
+	transition: 300ms color ease;
+}
+
+
+.book a{
+	color: #fff;
+	padding: 15px 32px 15px 35px;
+	border-radius: 30px;
+	background-image: linear-gradient(#6AB04C, #BADC58);
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100vh - 60px);
+	align-items: center;
+	justify-content: center;
+}
+.hero::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100vh;
+	background: #E8F0F3;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+.hero_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.hero_content::before {
+	content: 'nodmotors';
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: calc(50% - 200px);
+	font-size: 250px;
+	font-family: pantonbold;
+	opacity: .3;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+	z-index: -1;
+}
+.hero_title{
+	font-size: 50px;
+}
+.hero_content p {
+	color: #fff;
+}
+.hero_title, .hero_content p{
+	align-self: flex-start;
+}
+.hero_title, .hero_content p, .CarList_title{
+	animation: fadeIn .5s forwards;
+}
+.CarList p, footer {
+	animation: fadeUp .5s forwards;
+}
+
+
+.info li {
+	display: flex;
+	flex-direction: column;
+}
+.info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 30px;
+}
+
+.main_pic {
+	max-width: 630px;
+	height: auto;
+	padding-top: 10px;
+}
+.main_pic img {
+	max-width: 100%;
+	object-fit: cover;
+}
+.white, .black, .red, .orange, .grey, .green, .yellow, .blue, .pink {
+	border-radius: 50%;
+	margin: 0 4px;
+	height: 12px;
+	width: 12px;
+	border: 1px solid #95A5A6;
+}
+.white {
+	background: #fff;
+	/*border-radius: 50%;
+	margin: 0 4px;
+
+	height: 12px;
+	width: 12px;*/
+}
+.black {
+	background: #000;
+	/*border-radius: 50%;
+	margin: 0 4px;
+	width: 12px;
+	height: 12px;*/
+
+}
+.red {
+	background: #AA071E;
+	/*border-radius: 50%;
+	margin: 0 4px;
+
+	height: 12px;
+	width: 12px;*/
+}
+.orange {
+	background: #FF9331;
+}
+.grey {
+	background: #95A5A6;
+}
+.green {
+	background: #6AB04C;
+}
+
+.yellow {
+	background: #D1BB3F;
+}
+
+
+.blue {
+	background: #2F6AA2;
+}
+
+.pink
+ {
+	background: #FF664F;
+}
+
+
+.car_title {
+	color: #6AB04C;
+	font-size: 12px;
+}
+.car_data {
+	font-size: 30px;
+}
+
+a.hero_scroll {
+	/*align-self: flex-start;*/
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+	/*color: #fff;*/
+}
+
+.CarList {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    width: 90%;
+}
+.CarList_title {
+	font-size: 30px;
+	animation: fadeIn .5s forwards;
+}
+.CarList p {
+	font-size: 10px;
+	color: #95A5A6;
+}
+
+.CarList_ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 62px 0 27px;
+}
+.CarList_li {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33% - 10px);
+    margin: 10px 5px; 
+}
+.Price {
+	color: #6AB04C;
+}
+.car_img {
+	width: 256px;
+	height: auto;
+	object-fit: cover;
+}
+.car_name {
+	font-size: 20px;
+	padding-top: 10px;
+}
+.car_spec {
+	color: #95A5A6;
+	font-size: 10px;
+}
+.car_spec li{
+	padding: 0 10px;
+}
+.carColors {
+	display: flex;
+	cursor: pointer;
+}
+
+footer {
+	width: 80%;
+}
+
+.footerIcons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.footer {
+
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.filter_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 0;
+}
+.filter_listmenu {
+    display: flex;
+    justify-content: space-between;
+    width: 532px;
+}
+.option_list {
+    position: relative;
+    margin: 0 10px;
+    width: 164px;
+    height: 40px;
+}
+.option_list select {
+	width: 164px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+	background:  #fff;
+	box-shadow: 0 3px 6px rgba(24,24,24,.06);
+    padding: 12px 30px;
+}
+.CountPerPage select{
+	background-image: linear-gradient(#6AB04C, #BADC58);
+	color: #fff;
+	border-radius: 30px 30px 0 0;
+	padding: 13px;
+}
